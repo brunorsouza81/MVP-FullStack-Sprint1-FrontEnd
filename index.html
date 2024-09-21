@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>MVP Full Stack - Sprint 1 - Back-End (API Maquininha)</title>
+</head>
+
+<body>
+     <!-- Cabeçalho de informações do sistema -->
+    <header>
+        <div class="title">
+            <h1>Controle de Estoque de Terminais POS</h1>
+        </div>
+        <div class="banner">
+            <img src="img/adquirencia.jpg" alt="y">
+        </div>
+    </header>
+
+     <!-- Opções para adicionar um novo terminal -->
+    <section class="newItem">
+        <input type="text" id="newTerminal" maxlength="11" placeholder="Incluir novo terminal:">
+        <select id="newModelo" placeholder="Modelo:">
+            <option selected value="Smart POS - P2">Smart POS - P2</option>
+            <option value="Smart POS - X990">Smart POS - X990</option>
+            <option value="POS - S920">POS - S920</option>
+        </select>
+        <select id="newStatus" placeholder="Status:">
+            <option selected value="Em estoque">Em estoque</option>
+            <option value="Instalado">Instalado</option>
+            <option value="Reversado">Reversado</option>
+        </select>
+        <button onclick="newItem()" class="addBtn">Incluir</button>
+    </section>
+
+    <!-- Tabela com items existentes -->
+    <section class="items">
+        <table id="myTable">
+            <tr>
+                <th>Terminal</th>
+                <th>Modelo</th>
+                <th>Status</th>
+                <th>Ações</th>
+            </tr>
+        </table>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
+
+
